@@ -125,3 +125,42 @@
     @apply outline-2 outline-offset-1 outline-skin-fill focus-visible:no-underline focus-visible:outline-dashed;
   }
 }
+
+#hero {
+  padding: 2rem;
+}
+
+.hero-container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.hero-text {
+  flex: 2;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1; /* Ensure rectangular shape */
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+  }
+  .hero-image img {
+    aspect-ratio: auto; /* Let the image adjust naturally */
+  }
+}

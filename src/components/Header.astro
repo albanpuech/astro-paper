@@ -3,9 +3,11 @@ import { LOGO_IMAGE, SITE } from "@config";
 import Hr from "./Hr.astro";
 import LinkButton from "./LinkButton.astro";
 
-export interface Props {
-  activeNav?: "posts" | "archives" | "tags" | "about" | "search";
-}
+ export interface Props {
+  activeNav?: "posts" | "archives" | "Publications" | "tags" | "CV" | "search";
+} 
+
+
 
 const { activeNav } = Astro.props;
 ---
@@ -55,19 +57,24 @@ const { activeNav } = Astro.props;
           </svg>
         </button>
         <ul id="menu-items" class="display-none sm:flex">
-          <li>
+          <!-- <li>
             <a href="/posts/" class={activeNav === "posts" ? "active" : ""}>
               Posts
             </a>
-          </li>
-          <li>
+          </li> -->
+          <!-- <li>
             <a href="/tags/" class={activeNav === "tags" ? "active" : ""}>
               Tags
             </a>
+          </li> -->
+          <li>
+            <a href="/Publications/" class={activeNav === "Publications" ? "active" : ""}>
+              Publications
+            </a>
           </li>
           <li>
-            <a href="/about/" class={activeNav === "about" ? "active" : ""}>
-              About
+            <a href="/CV/" class={activeNav === "CV" ? "active" : ""}>
+              CV
             </a>
           </li>
           {
